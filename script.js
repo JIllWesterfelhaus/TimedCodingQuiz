@@ -1,16 +1,16 @@
+var myTimer;
 function clock() {
-    var myTimer = setInterval(myClock, 1000);
+    myTimer = setInterval(myClock, 1000);
     var c = 300;
 
     function myClock() {
-      document.getElementById("timer").innerHTML = --c;
-      if (c == 0) {
-        clearInterval(myTimer);
-        alert("Time's up!");
-      }
+        document.getElementById("timer").innerHTML = --c;
+        if (c == 0) {
+            clearInterval(myTimer);
+            alert("Time's up!");
+        }
     }
-  }
-
+}
 
 var myQuestion = {
     question: 'What is 1+1?',

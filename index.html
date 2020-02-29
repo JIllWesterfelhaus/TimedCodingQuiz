@@ -16,20 +16,22 @@
 <body>
     <h1>Time for a quiz!</h1>
 
-    <p>Test your knowledge of JavaScript with this timed quiz! You have five minutes to complete the quiz.<br><br> 
-        All wrong answers will deduct 30 seconds from the clock, so choose carefully!<br/><br/>
+    <p>Test your knowledge of JavaScript with this timed quiz! You have five minutes to complete the quiz.<br><br>
+        All wrong answers will deduct 30 seconds from the clock, so choose carefully!<br /><br />
         Let's get started!
     </p>
 
-    <p id="timer">5 minutes</p>
-<button onclick="clock()">Start Timer</button>
-<!--<button onclick="clearInterval(myTimer)">Stop counter</button>-->
+    <p id="timer">5 minutes (300 seconds)</p>
+    <button onclick="clock()">Start Timer</button>
+    <!-- <button onclick="clearInterval(myTimer)">Stop Timer</button> -->
 
     <div id="question">
 
+        <div id="text" onClick="function()">your text here</div>
+
     </div>
 
-    
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
