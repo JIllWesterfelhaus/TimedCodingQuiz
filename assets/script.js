@@ -71,7 +71,6 @@ questionEl.addEventListener("click", function (event) {
             answerDiv.setAttribute('data-correct', 'true')
         }
     }
-    
+
 
 })
- 
