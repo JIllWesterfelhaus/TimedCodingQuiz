@@ -46,7 +46,6 @@ var questions = [
     }
 ]
 function generateQuestion(question) {
-    //
     var el = document.getElementById('question')
     el.innerHTML = ''
     var questionDiv = document.createElement('div')
@@ -73,5 +72,7 @@ questionEl.addEventListener("click", function (event) {
         }
     }
 
-
 })
+
+//deduct 30 seconds from timer for button click on answer other than right answer
+
