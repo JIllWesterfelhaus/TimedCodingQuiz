@@ -45,7 +45,13 @@ var questions = [
         rightAnswer: 0
     }
 ]
-
+var questionEl = document.getElementById('question')
+questionEl.addEventListener("click", function(event) {
+    if (event.target.matches("button")) {
+        if (question.rightAnswer == i) {
+            answerDiv.setAttribute('data-correct', 'true')  
+    }
+})
 function generateQuestion(question) {
     var el = document.getElementById('question')
     el.innerHTML = ''
@@ -54,7 +60,7 @@ function generateQuestion(question) {
     el.appendChild(questionDiv)
 
     for (var i = 0; i < question.answers.length; i++) {
-        var answerDiv = document.createElement('div')
+        var answerDiv = document.createElement('button')
         answerDiv.innerHTML = question.answers[i]
         if (question.rightAnswer == i) {
             answerDiv.setAttribute('data-correct', 'true')
