@@ -35,17 +35,18 @@ var questions = [
         rightAnswer: 2
     },
     {
-        question: 'What is 2+2?',
+        question: 'What do Javascript arrays store?',
         answers: [
-            '4',
-            '2',
-            '0',
-            '1'
+            'Multiple values in a single variable.',
+            'Groceries in the freezer.',
+            'Letters in the alphabet.',
+            'Cars in a garage.'
         ],
         rightAnswer: 0
     }
 ]
 function generateQuestion(question) {
+    //
     var el = document.getElementById('question')
     el.innerHTML = ''
     var questionDiv = document.createElement('div')
