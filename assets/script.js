@@ -46,6 +46,7 @@ var questions = [
     }
 ]
 function generateQuestion(question) {
+    //
     var el = document.getElementById('question')
     el.innerHTML = ''
     var questionDiv = document.createElement('div')
@@ -72,6 +73,7 @@ questionEl.addEventListener("click", function (event) {
         }
     }
 
+<<<<<<< HEAD
 })
 
 //deduct 30 seconds from timer for button click on answer other than right answer
@@ -84,4 +86,7 @@ questionEl.addEventListener("click", function (event) {
        text += question
 
     }
+=======
+>>>>>>> parent of 2fc77dc... Update script.js
 
+})
