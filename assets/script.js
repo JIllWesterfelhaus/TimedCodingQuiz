@@ -75,4 +75,13 @@ questionEl.addEventListener("click", function (event) {
 })
 
 //deduct 30 seconds from timer for button click on answer other than right answer
+//add 5 points for button click on right answer
+//any button click, move to next question
+
+var myQuestion = document.getElementById('question')
+questionEl.addEventListener("click", function (event) {
+    for (i = 0; i < 3; i++) {
+       text += question
+
+    }
 
