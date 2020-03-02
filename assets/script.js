@@ -74,8 +74,10 @@ questionEl.addEventListener("click", function (event) {
 
 })
 
+
+//any button click, move to next question
 //deduct 30 seconds from timer for button click on answer other than right answer
 //add 5 points for button click on right answer
-//any button click, move to next question
+
 
 
