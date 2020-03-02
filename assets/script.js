@@ -38,9 +38,9 @@ var questions = [
         question: 'What do Javascript arrays store?',
         answers: [
             'Multiple values in a single variable.',
-            'Groceries in the freezer.',
+            'Elements in a div.',
             'Letters in the alphabet.',
-            'Cars in a garage.'
+            'Styles from an external sheet to load into HTML.'
         ],
         rightAnswer: 0
     }
