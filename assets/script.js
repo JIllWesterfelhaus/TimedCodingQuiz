@@ -1,54 +1,56 @@
 
-    var countdown = 300
-    var intervalId
-    function Clock() {
-        clearInterval(intervalId);
-        intervalId = setInterval
+var countdown = 300
+var intervalId
+function Clock() {
+    clearInterval(intervalId);
+    intervalId = setInterval
         (decrement, 1000);
-    }
-        function decrement() {
-        countdown--;
-        $("#timer").html(countdown + 
-        " seconds left");
-        if (countdown === 0) {
-            alert("Time's up!")
-        }
-        }
-        Clock();
-
-var myQuestion = {
-    question: 'What does Javascript do?',
-    answers: [
-        'Identifies the content of web pages ',
-        'Programs behavior of web pages.',
-        'Specifies layout of web pages',
-        'Focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence.' 
-    ],
-    rightAnswer: 1
 }
+function decrement() {
+    countdown--;
+    $("#timer").html(countdown +
+        " seconds left");
+    if (countdown === 0) {
+        alert("Time's up!")
+    }
+}
+Clock();
 
 var questions = [
-    {
-        question: 'What is the formula for a for loop?',
+
+    question: 'What does Javascript do?',
+        answers: [
+            'Identifies the content of web pages ',
+            'Programs behavior of web pages.',
+            'Specifies layout of web pages',
+            'Focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence.'
+    ],
+    rightAnswer: 1
+    }
+{
+    question: 'What is the formula for a for loop?',
         answers: [
             '42',
             'y=mx+b',
             'var i; for (i = 0; i < 1;i++',
             'e=mc2'
         ],
-        rightAnswer: 2
-    },
-    {
-        question: 'What do Javascript arrays store?',
+            rightAnswer: 2
+}
+{
+    question: 'What do Javascript arrays store?',
         answers: [
             'Multiple values in a single variable.',
             'Elements in a div.',
             'Letters in the alphabet.',
             'Styles from an external sheet to load into HTML.'
         ],
-        rightAnswer: 0
+           rightAnswer: 0
     }
-]
+
+
+
+
 function generateQuestion(question) {
     var el = document.getElementById('question')
     el.innerHTML = ''
