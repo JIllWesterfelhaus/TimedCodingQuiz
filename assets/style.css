@@ -1,8 +1,16 @@
 #timer {
-    padding: 30px;
+    padding: 10px;
     color: red;
 }
 h1 {
     text-align: center;
     margin: 20px;
+}
+
+.intro-container {
+text-align: center;
+}
+
+.intro {
+   display: inline-block
 }
