@@ -1,16 +1,20 @@
-var myTimer;
-function clock() {
-    myTimer = setInterval(myClock, 1000);
-    var c = 300;
 
-    function myClock() {
-        document.getElementById("timer").innerHTML = --c;
-        if (c == 0) {
-            clearInterval(myTimer);
-            alert("Time's up!");
-        }
+    var countdown = 300
+    var intervalId
+    function Clock() {
+        clearInterval(intervalId);
+        intervalId = setInterval
+        (decrement, 1000);
     }
-}
+        function decrement() {
+        countdown--;
+        $("#timer").html(countdown + 
+        "seconds left");
+        if (countdown === 0) {
+            alert("Time's up!")
+        }
+        }
+        Clock();
 
 var myQuestion = {
     question: 'What does Javascript do?',
