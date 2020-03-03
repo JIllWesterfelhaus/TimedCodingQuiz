@@ -17,7 +17,7 @@ function decrement() {
 Clock();
 
 var questions = [
-
+    {
     question: 'What does Javascript do?',
         answers: [
             'Identifies the content of web pages ',
@@ -26,7 +26,7 @@ var questions = [
             'Focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence.'
     ],
     rightAnswer: 1
-    }
+    },
 {
     question: 'What is the formula for a for loop?',
         answers: [
@@ -36,7 +36,7 @@ var questions = [
             'e=mc2'
         ],
             rightAnswer: 2
-}
+},
 {
     question: 'What do Javascript arrays store?',
         answers: [
@@ -46,7 +46,8 @@ var questions = [
             'Styles from an external sheet to load into HTML.'
         ],
            rightAnswer: 0
-    }
+    },
+]
 
 
 
