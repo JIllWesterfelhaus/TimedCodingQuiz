@@ -9,7 +9,7 @@
         function decrement() {
         countdown--;
         $("#timer").html(countdown + 
-        "seconds left");
+        " seconds left");
         if (countdown === 0) {
             alert("Time's up!")
         }
