@@ -13,24 +13,24 @@ function clock() {
 }
 
 var myQuestion = {
-    question: 'What is 1+1?',
+    question: 'What does Javascript do?',
     answers: [
-        '5',
-        '2',
-        '0',
-        '1'
+        'Identifies the content of web pages ',
+        'Programs behavior of web pages.',
+        'Specifies layout of web pages',
+        'Focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence.' 
     ],
     rightAnswer: 1
 }
 
 var questions = [
     {
-        question: 'What is 3+3?',
+        question: 'What is the formula for a for loop?',
         answers: [
-            '5',
-            '2',
-            '6',
-            '1'
+            '42',
+            'y=mx+b',
+            'var i; for (i = 0; i < 1;i++',
+            'e=mc2'
         ],
         rightAnswer: 2
     },
