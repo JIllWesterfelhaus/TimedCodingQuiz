@@ -78,7 +78,7 @@ if (rightAnswer) {
 localStorage.rightAnswer = "Right Answer!"
 alert(localStorage.rightAnswer)
 
-//see to do app from coding book, local storage, save score and initials
+//local storage needs to save points and initials
 //currently choosing questions at random, choosing same question more than once.  Needs to go through array, at random but each item once.
 
 
