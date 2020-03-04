@@ -18,66 +18,58 @@ Clock();
 
 var questions = [
     {
-    question: 'What does Javascript do?',
+        question: 'What does Javascript do?',
         answers: [
             'Identifies the content of web pages ',
             'Programs behavior of web pages.',
             'Specifies layout of web pages',
             'Focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence.'
-    ],
-    rightAnswer: 1
+        ],
+        rightAnswer: 1
     },
-{
-    question: 'What is the formula for a for loop?',
+    {
+        question: 'What is the formula for a for loop?',
         answers: [
             '42',
             'y=mx+b',
             'var i; for (i = 0; i < 1;i++',
             'e=mc2'
         ],
-            rightAnswer: 2
-},
-{
-    question: 'What do Javascript arrays store?',
+        rightAnswer: 2
+    },
+    {
+        question: 'What do Javascript arrays store?',
         answers: [
             'Multiple values in a single variable.',
             'Elements in a div.',
             'Letters in the alphabet.',
             'Styles from an external sheet to load into HTML.'
         ],
-           rightAnswer: 0
+        rightAnswer: 0
     },
 ]
 
 
-function generateQuestion(question) {
-    var el = document.getElementById('question')
-    el.innerHTML = ''
-    var questionDiv = document.createElement('div')
-    questionDiv.innerHTML = question.question
-    el.appendChild(questionDiv)
+function generateQuestion(questions)  {
+    var el = $("#question");
 
-    for (var i = 0; i < question.answers.length; i++) {
-        var answerDiv = document.createElement('button')
-        answerDiv.innerHTML = question.answers[i]
-        if (question.rightAnswer == i) {
-            answerDiv.setAttribute('data-correct', 'true')
-        }
-        el.appendChild(answerDiv)
+    el.html(questions.question)
+
+    for (var i = 0; i < questions.answers.length; i++)  {
+        var answerDiv = document.createElement ('button');
+        $("button").attr("class", "answer-btn");
+        answerDiv.append(questions.answers[i])
+        el.append(answerDiv)
+
     }
 }
 
-generateQuestion(questions[1])
+var randomQuestion = Math.floor(Math.random() * questions.length);
+generateQuestion(questions[randomQuestion])
 
-var questionEl = document.getElementById('question')
-questionEl.addEventListener("click", function (event) {
-    if (event.target.matches("button")) {
-        if (question.rightAnswer == i) {
-            answerDiv.setAttribute('data-correct', 'true')
-        }
-    }
 
-})
+$(".answer-btn").on("click", generateQuestion)
+
 
 //any button click, move to next question
 //deduct 30 seconds from timer for button click on answer other than right answer
