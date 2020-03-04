@@ -75,8 +75,8 @@ if (rightAnswer) {
     //move to next question in array
 }
 
-localStorage.rightAnswer = "Right Answer!"
-alert(localStorage.rightAnswer)
+localStorage.rightAnswer //add 5 points
+//text? (localStorage.rightAnswer)
 
 //local storage needs to save points and initials
 //currently choosing questions at random, choosing same question more than once.  Needs to go through array, at random but each item once.
