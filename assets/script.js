@@ -49,13 +49,13 @@ var questions = [
     },
 ]
 
-function generateQuestion(questions)  {
+function generateQuestion(questions) {
     var el = $("#question");
 
     el.html(questions.question)
 
-    for (var i = 0; i < questions.answers.length; i++)  {
-        var answerDiv = document.createElement ('button');
+    for (var i = 0; i < questions.answers.length; i++) {
+        var answerDiv = document.createElement('button');
         $("button").attr("class", "answer-btn");
         answerDiv.append(questions.answers[i])
         el.append(answerDiv)
@@ -73,7 +73,7 @@ $(".answer-btn").on("click", generateQuestion)
 //add 5 points for button click on right answer
 //if else for answers to questions, if right answer 5 pts, if wrong answer deduct 30 secs from timer
 //see to do app from coding book, local storage, save score and initials
-//currently choosing questions at random, choosing same question more than once
+//currently choosing questions at random, choosing same question more than once.  Needs to go through array, at random but each item once.
 
 
 
