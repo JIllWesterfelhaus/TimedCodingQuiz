@@ -54,7 +54,7 @@ function generateQuestion(questions) {
 
     el.html(questions.question)
 
-    for (var i = 0; i < questions.answers.length; i++) {
+    for (var i = 0; i < 4; i++) {
         var answerDiv = document.createElement('button');
         $("button").attr("class", "answer-btn");
         answerDiv.append(questions.answers[i])
@@ -71,12 +71,16 @@ if (rightAnswer) {
     //add 5 points to local storage
     //move to next question in array
 }   else   {
-    //decrement timer 5 seconds
-    //move to next question in array
-}
+    addEventListener('click', function() {
+        sec -= 30;
+        document.getElementById('Clock').innerHTML='00:'+sec;
+    });
 
-localStorage.rightAnswer //add 5 points
-//text? (localStorage.rightAnswer)
+}
+    //move to next question in array
+
+
+
 
 //local storage needs to save points and initials
 //currently choosing questions at random, choosing same question more than once.  Needs to go through array, at random but each item once.
