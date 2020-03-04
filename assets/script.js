@@ -59,7 +59,6 @@ function generateQuestion(questions) {
         $("button").attr("class", "answer-btn");
         answerDiv.append(questions.answers[i])
         el.append(answerDiv)
-
     }
 }
 
@@ -68,10 +67,17 @@ generateQuestion(questions[randomQuestion])
 
 $(".answer-btn").on("click", generateQuestion)
 
-//any button click, move to next question
-//deduct 30 seconds from timer for button click on answer other than right answer
-//add 5 points for button click on right answer
-//if else for answers to questions, if right answer 5 pts, if wrong answer deduct 30 secs from timer
+if (rightAnswer) {
+    //add 5 points to local storage
+    //move to next question in array
+}   else   {
+    //decrement timer 5 seconds
+    //move to next question in array
+}
+
+localStorage.rightAnswer = "Right Answer!"
+alert(localStorage.rightAnswer)
+
 //see to do app from coding book, local storage, save score and initials
 //currently choosing questions at random, choosing same question more than once.  Needs to go through array, at random but each item once.
 
