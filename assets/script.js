@@ -49,7 +49,6 @@ var questions = [
     },
 ]
 
-
 function generateQuestion(questions)  {
     var el = $("#question");
 
@@ -67,15 +66,14 @@ function generateQuestion(questions)  {
 var randomQuestion = Math.floor(Math.random() * questions.length);
 generateQuestion(questions[randomQuestion])
 
-
 $(".answer-btn").on("click", generateQuestion)
-
 
 //any button click, move to next question
 //deduct 30 seconds from timer for button click on answer other than right answer
 //add 5 points for button click on right answer
 //if else for answers to questions, if right answer 5 pts, if wrong answer deduct 30 secs from timer
 //see to do app from coding book, local storage, save score and initials
+//currently choosing questions at random, choosing same question more than once
 
 
 
