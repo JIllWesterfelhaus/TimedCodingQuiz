@@ -1,6 +1,7 @@
-
+var questionCounter = 0
 var countdown = 300
 var intervalId
+
 function Clock() {
     clearInterval(intervalId);
     intervalId = setInterval
@@ -16,19 +17,21 @@ function decrement() {
 }
 Clock();
 
-var questions = [
-    {
-        question: 'What does Javascript do?',
+
+
+var questionList = [ //array
+    { // object
+        questionTitle: 'What does Javascript do?',
         answers: [
             'Identifies the content of web pages ',
             'Programs behavior of web pages.',
             'Specifies layout of web pages',
             'Focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence.'
         ],
-        rightAnswer: 1
+        rightAnswer: 'Programs behavior of web pages.'
     },
     {
-        question: 'What is the formula for a for loop?',
+        questionTitle: 'What is the formula for a for loop?',
         answers: [
             '42',
             'y=mx+b',
@@ -38,7 +41,7 @@ var questions = [
         rightAnswer: 2
     },
     {
-        question: 'What do Javascript arrays store?',
+        questionTitle: 'What do Javascript arrays store?',
         answers: [
             'Multiple values in a single variable.',
             'Elements in a div.',
@@ -49,34 +52,43 @@ var questions = [
     },
 ]
 
-function generateQuestion(questions) {
-    var el = $("#question");
+function generateQuestion() {
+    // access the h1 called question in my html
+    var questionH1 = $("#question");
+    
+    // access the div called answerArea for the answers to go inside
+    var answerArea = $('.answerArea')
 
-    el.html(questions.question)
+    // set the question title text inside of the H1 on html
+    questionH1.text(`${questionList[questionCounter].questionTitle}`)
 
+    // loop through the answers
     for (var i = 0; i < 4; i++) {
-        var answerDiv = document.createElement('button');
-        $("button").attr("class", "answer-btn");
-        answerDiv.append(questions.answers[i])
-        el.append(answerDiv)
+        // creating a button to put the answer text inside of
+        var answerBtn = document.createElement('button');
+        // setting the inner text of the above button to be the answer we are on
+        answerBtn.innerHTML = `${questionList[questionCounter].answers[i]}`
+        // append this button to the div in html
+        answerArea.append(answerBtn)
     }
 }
 
-var randomQuestion = Math.floor(Math.random() * questions.length);
-generateQuestion(questions[randomQuestion])
+$(".answer-btn").on("click", function(){
+    generateQuestion()
+    questionCounter++
+})
+generateQuestion()
 
-$(".answer-btn").on("click", generateQuestion)
+// if (rightAnswer) {
+//     //add 5 points to score, local storage?
+//     //move to next question in array
+// }   else   {
+//     addEventListener('click', function() {
+//         sec -= 30;
+//         document.getElementById('Clock').innerHTML='00:'+sec;
+//     });
 
-if (rightAnswer) {
-    //add 5 points to local storage
-    //move to next question in array
-}   else   {
-    addEventListener('click', function() {
-        sec -= 30;
-        document.getElementById('Clock').innerHTML='00:'+sec;
-    });
-
-}
+// }
     //move to next question in array
 
 
