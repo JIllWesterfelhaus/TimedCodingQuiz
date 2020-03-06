@@ -79,23 +79,13 @@ $(".answer-btn").on("click", function(){
 })
 generateQuestion()
 
-// if (rightAnswer) {
-//     //add 5 points to score, local storage?
-//     //move to next question in array
-// }   else   {
-//     addEventListener('click', function() {
-//         sec -= 30;
-//         document.getElementById('Clock').innerHTML='00:'+sec;
-//     });
-
-// }
-    //move to next question in array
 
 
 
 
-//local storage needs to save points and initials
-//currently choosing questions at random, choosing same question more than once.  Needs to go through array, at random but each item once.
+
+
+
 
 
 
