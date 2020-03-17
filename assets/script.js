@@ -79,6 +79,16 @@ $(".answer-btn").on("click", function(){
 })
 generateQuestion()
 
+//var rightAnswer
+//$('answer-btn').on("click", function(){
+//if (rightAnswer) {
+  //  generateQestion; increment score + 5
+//} else {
+  //  generateQuestion; decrement countdown - 30
+//}
+   //})
+   //need function to keep total of score, link to local storage
+
 
 
 
